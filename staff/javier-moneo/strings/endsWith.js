@@ -1,3 +1,1 @@
-function endsWith(searchString, endPosition) {
-
-}
+function endsWith(string, searchString = 'undefined', endPosition) {}
