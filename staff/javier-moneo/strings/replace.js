@@ -8,7 +8,7 @@ function replace(string, pattern, replacement) {
         result += string[i];
       }
     } else {
-      // replace first ocurrence of pattern
+      // case: replace first ocurrence of pattern
       var analized = '';
       var patternFound = false;
       var indexPatternFoundEnd = 0;
