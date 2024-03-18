@@ -34,11 +34,11 @@ var users = [
 var peterId = '5t45e5i';
 
 function savePost(userId, postId) {
-  var user = users.find((x) => x.id === userId);
+  var user = users.find((user) => user.id === userId);
   console.log({ userBefore: user });
 
   var indexPost = user.saved.indexOf(postId);
-  if (indexPost > 0) {
+  if (indexPost >= 0) {
     user.saved.splice(indexPost, 1);
   } else {
     user.saved.push(postId);
@@ -47,5 +47,6 @@ function savePost(userId, postId) {
   console.log(user);
 }
 
-savePost(peterId, 'f4jkg4g');
-savePost(peterId, '1111111');
+// savePost(peterId, 'f4jkg4g');
+// savePost(peterId, '1111111');
+savePost(peterId, 'grghejh4');
