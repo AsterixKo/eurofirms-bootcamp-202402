@@ -87,21 +87,24 @@ var users = [
   { id: 'djn5gje', name: 'pinocho', email: 'pin@ocho.com', saved: [] },
 ];
 
-for (var i = 0; i < users.length; i++) {
-  if (users[i].name.indexOf('pe') >= 0) {
-    users.splice(i, 1);
-  }
-}
-
+users = users.filter((user) => !user.name.startsWith('pe'));
 console.log(users);
-// Otra forma de hacelo
+// mejor usar una copia porque estoy usando el splice en un bucle
+// for (var i = 0; i < users.length; i++) {
+//   if (users[i].name.indexOf('pe') >= 0) {
+//     users.splice(i, 1);
+//   }
+// }
+
+// console.log(users);
+// Otra forma de hacerlo
 // for (var i = 0; i < users.length; i++) {
 //   if (users[i].name.startsWith('pe')) {
 //     users.splice(i, 1);
 //   }
 // }
 
-// Otra forma de hacelo
+// Otra forma de hacerlo
 // users.forEach((user, index) => {
 //   if (user.name.startsWith('pe')) {
 //     users.splice(index, 1);
