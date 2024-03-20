@@ -111,9 +111,10 @@ var users2 = [
 ];
 
 var usersEmailName = users2.reduce((previousUser, currentUser) => {
-  delete currentUser.id;
-  delete currentUser.saved;
+  // delete currentUser.id;
+  // delete currentUser.saved;
 
+  var newUser = { name: currentUser.name, email: currentUser.email };
   previousUser.push(currentUser);
   return previousUser;
 }, []);

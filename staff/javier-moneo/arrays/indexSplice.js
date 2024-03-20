@@ -54,7 +54,7 @@ for (var i = 0; i < numbersClone.length; i++) {
 }
 console.log(numbers2);
 
-// Otra forma de hacerlo
+// Otra forma de hacerlo, pero no funciona bien porque estas iterando en lo que borras
 // numbers.forEach((value, index) => {
 //   if (value % 2 !== 0) {
 //     numbers.splice(index, 1);
